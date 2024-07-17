@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Store management system</title>
+  </head>
+  <body>
+      <div class="header shadow p-3 bg-light text-center fw-bold fs-1 m-auto">Store management system</div>
+    <div class="container mt-5">
+      <div class="form-floating mb-3">
+        <input
+        oninput="validation(this)"
+          type="text"
+          class="form-control"
+          id="productName"
+          placeholder="Product Name"
+        />
+        <span class="d-none text-danger p-2">Must start with capital letter and at least contains three letters.</span>
+
+        <label for="floatingInput">Product Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        oninput="validation(this)"
+          type="text"
+          class="form-control"
+          id="productPrice"
+          placeholder="Product Price"
+        />
+        <span class="d-none text-danger p-2">At least three digits and maximum six digits.</span>
+
+        <label for="floatingInput">Product Price</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        oninput="validation(this)"
+          type="text"
+          class="form-control"
+          id="productDes"
+          placeholder="Product Description"
+        />
+        <span class="d-none text-danger p-2">Must start with capital letter and maximum six letters.</span>
+
+        <label for="floatingInput">Product Description</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        oninput="validation(this)"
+          type="text"
+          list="cat"
+          class="form-control"
+          id="productCat"
+          placeholder="Product Category"
+        />
+        <span class="d-none text-danger p-2">Must choose from the list.</span>
+        <label for="floatingInput">Product Category</label>
+      </div>
+      <datalist id="cat">
+        <option value="Laptop"></option>
+        <option value="Screen"></option>
+        <option value="Mobile"></option>
+      </datalist>
+
+      <div class="form-floating mb-3">
+        <input
+          accept="Image/*"
+          type="file"
+          class="form-control"
+          id="productImg"
+          placeholder="Product Image"
+        />
+        <label for="floatingInput">Product Image</label>
+      </div>
+      <button onclick="addProduct ()" type="button" class="btn btn-success">
+        Add Product
+      </button>
+    </div>
+    <div class="form-floating w-50 m-auto mt-5">
+      <input
+        oninput="search()"
+        type="search"
+        class="form-control"
+        id="productSearch"
+        placeholder="product Search"
+      />
+      <label for="floatingInput">
+        <i class="fa-solid fa-magnifying-glass me-2"></i>
+        product Search</label
+      >
+    </div>
+    <div class="container mt-5 p-5 border-5 border-light border rounded-5">
+      <div class="row gy-2" id="demo"></div>
+    </div>
+    </div>
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
